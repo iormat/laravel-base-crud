@@ -4,7 +4,9 @@
     <div id="comics">
         @foreach ($comics as $comic)
             <div class="comic-card">
-                <h3>Title: {{ $comic -> title }}</h3>
+                <h3>Title:
+                    <a href="{{ route('show', $comic -> id) }}">{{ $comic -> title }}</a>
+                </h3>
             </div>
         @endforeach
     </div>

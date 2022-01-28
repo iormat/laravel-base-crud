@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Comic;
 
 class ComicSeeder extends Seeder
 {
@@ -11,6 +12,6 @@ class ComicSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(Comic::class, 100) -> create();
     }
 }
